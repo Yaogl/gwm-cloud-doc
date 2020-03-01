@@ -1,7 +1,7 @@
 const path = require('path');
 module.exports = {
-    title: 'PaaS Help Documents',
-    description: '提供PaaS平台功能文档',
+    title: 'PaaS Help Center',
+    description: 'PaaS平台帮助中心',
     head: [
         ['link', {
             rel: 'icon',
