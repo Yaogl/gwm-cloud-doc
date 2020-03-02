@@ -6,10 +6,10 @@ title: PaaS监控
 ### 访问地址 ###
 
 #### 保定 ####
-> [http://platform.baoding.paas.gwm.cn/monitro](http://platform.baoding.paas.gwm.cn/monitro)
+> [http://platform.baoding.paas.gwm.cn/monitor](http://platform.baoding.paas.gwm.cn/monitor)
 
 #### 天津 ####
-> [http://platform.tianjin.paas.gwm.cn/monitro](http://platform.tianjin.paas.gwm.cn/monitro)
+> [http://platform.tianjin.paas.gwm.cn/monitor](http://platform.tianjin.paas.gwm.cn/monitor)
 
 ### Grafana ###
 
