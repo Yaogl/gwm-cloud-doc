@@ -2,27 +2,12 @@
 title: MySQL
 
 ---
+## Mysql管理
+### Mysql列表
+![](~@vuepress/mysql1.png)
 
-# 一级标题
-## 二级标题
-### 容器
+### 创建Mysql服务
+![](~@vuepress/mysql2.png)
 
-
-::: warning
-这是一个警告
-:::
-
-### 代码块
-``` js
-export default {
-  name: 'MyComponent',
-  // ...
-}
-```
-
-
-
-### title3-01
-
-## small title
-content...
+### Mysql配置详情
+![](~@vuepress/mysql3.png)

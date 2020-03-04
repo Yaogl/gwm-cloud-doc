@@ -28,13 +28,13 @@ module.exports = {
             {text: '指南', link: '/guide/'},
         ],
         displayAllHeaders: 'auto',
-        sidebarDepth: 0,
+        sidebarDepth: 1,
         sidebar: [
             ['/guide/', '介绍'],
 
             {
                 title: '弹性计算',
-                collapsable: true,
+                collapsable: false,
                 children: [
                     '/elastic_computing/container_services',
                     '/elastic_computing/image',
@@ -42,14 +42,14 @@ module.exports = {
             },
             {
                 title: '数据库',
-                collapsable: true,
+                collapsable: false,
                 children: [
                     '/databases/mysql',
                 ]
             },
             {
                 title: '缓存',
-                collapsable: true,
+                collapsable: false,
                 children: [
                     '/caches/redis.md',
 
@@ -57,13 +57,13 @@ module.exports = {
             },
             {
                 title: '消息队列',
-                collapsable: true,
+                collapsable: false,
                 children: [
                     '/message_queue/rocketMQ.md',
                 ]
             },
 
-            ['/storage/', '对象存储'],
+            ['/storage/', '存储'],
             ['/monitor/', '监控'],
             ['/log/', '日志'],
         ]

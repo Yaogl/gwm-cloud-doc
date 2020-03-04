@@ -3,25 +3,13 @@ title: Redis
 
 ---
 
-# Redis
-## 二级标题
-### 容器
+## Redis管理
+### Redis列表
+![](~@vuepress/redis1.png)
 
-::: warning
-这是一个警告
-:::
+### 创建Redis服务
+![](~@vuepress/redis2.png)
 
-### 代码块
-``` js
-export default {
-  name: 'MyComponent',
-  // ...
-}
-```
-
-
-
-### title3-01
-
-## small title
-content...
+### Redis详细配置
+![](~@vuepress/redis3.png)
+![](~@vuepress/redis4.png)
