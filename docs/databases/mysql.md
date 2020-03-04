@@ -1,5 +1,6 @@
 ---
 title: MySQL
+permalink: /databases/mysql
 
 ---
 ## Mysql管理

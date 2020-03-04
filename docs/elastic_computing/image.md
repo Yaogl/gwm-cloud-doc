@@ -1,5 +1,6 @@
 ---
 title: 镜像仓库
+permalink: /elastic_computing/image
 
 ---
 

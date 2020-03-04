@@ -50,7 +50,7 @@ title: 指南
 ## 2. 模块介绍
 
 ### 2.0 弹性计算
-#### 2.0.0 [镜像管理](elastic_computing/image)
+#### 2.0.0 [镜像管理](/elastic_computing/image)
 - 使用`PaaS`平台公共基础镜像，构建私有镜像。
 
 #### 2.0.1 [容器服务](/elastic_computing/container_services)

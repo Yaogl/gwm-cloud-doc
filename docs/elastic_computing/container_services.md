@@ -1,6 +1,6 @@
 ---
 title: 容器服务
-
+permalink: /elastic_computing/container_services
 ---
 
 ## 项目管理
