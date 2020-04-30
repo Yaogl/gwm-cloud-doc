@@ -88,136 +88,246 @@ Minio使用纠删码erasure code和校验和checksum来保护数据免受硬件�
 
 ## 服务接口
 
-### 上传文件
+### Bucket
 
-<a id=上传文件> </a>
+*创建/删除 bucket 只能通过 PaaS页面进行操作
 
-### 基本信息
+不允许bucketName有大写字母、下划线、减号，特殊字符 如@#等。，长度为两个字符以上
 
-**Path：** /bucket/:bucket_name
-
-**Method：** POST
-
-**请求参数**
-
-**Headers**
-
-| 参数名称     | 参数值              | 是否必须 | 示例 | 备注 |
-| ------------ | ------------------- | -------- | ---- | ---- |
-| Content-Type | multipart/form-data | 是       |      |      |
-
-**路径参数**
-
-| 参数名称    | 示例 | 备注 |
-| ----------- | ---- | ---- |
-| bucket_name | test |      |
-
-**Body**
-
-| 参数名称 | 参数类型 | 是否必须 | 示例 | 备注 |
-| -------- | -------- | -------- | ---- | ---- |
-| file     | file     | 是       |      |      |
+> 页面待开发，目前使用请联系管理员
 
 
 
-#### 返回数据
+#### API 接口
+
+> 以下接口使用BasicAuth认证
+
+##### 1. 上传文件
+
+**请求方法：** PUT
+
+**URL：**`/api/v1/user/<username>/bucket/<bucket_name>/file/`
+
+**参数说明：**
+
+- username
+  - 类型：string
+  - 位置：PATH
+- bucket_name
+  - 类型：string
+  - 位置：PATH
+- file：
+  - 类型：文件
+  - 位置：FORM
+
+**返回结果：**
 
 ```json
 {
-  "code":200,
-  "data":null,"message":"OK"
+    "code": 200,
+    "msg": "ok",
+    "result": null
 }
 ```
 
 
 
+##### 2. 下载文件
 
-### 删除文件
+**请求方法：** GET
 
-<a id=删除文件> </a>
+**URL：**`/api/v1/user/<username>/bucket/<bucket_name>/file/<file_name>/`
 
-#### 基本信息
+**参数说明：**
 
-**Path：** /bucket/:bucket_name/file/:file_name
+- username
+  - 类型：string
+  - 位置：PATH
+- bucket_name
+  - 类型：string
+  - 位置：PATH
 
-**Method：** DELETE
+**返回结果：**文件
 
-**请求参数**
 
-**路径参数**
 
-| 参数名称    | 示例     | 备注 |
-| ----------- | -------- | ---- |
-| bucket_name | Test     |      |
-| file_name   | Test.csv |      |
+##### 3. 删除文件
 
-### 获取文件
+**请求方法：** DELETE
 
-<a id=获取文件> </a>
+**URL：**`/api/v1/user/<username>/bucket/<bucket_name>/file/<file_name>/`
 
-#### 基本信息
+**参数说明：**
 
-**Path：** /bucket/:bucket_name/file/:file_name
+- username
+  - 类型：string
+  - 位置：PATH
+- bucket_name
+  - 类型：string
+  - 位置：PATH
 
-**Method：** GET
-
-**请求参数**
-
-**路径参数**
-
-| 参数名称    | 示例 | 备注 |
-| ----------- | ---- | ---- |
-| bucket_name |      |      |
-| file_name   |      |      |
-
-### 获取文件状态
-
-<a id=获取文件状态> </a>
-
-#### 基本信息
-
-**Path：** /bucket/:bucket_name/file/:file_name/status
-
-**Method：** GET
-
-**接口实例：**
+**返回结果：**
 
 ```json
 {
-  "code":200,
-  "data":
-  {
-    "bucket_name":"test",
-    "content_type":"application/octet-stream",
-    "etag":"05aa36e67a4cf830ca554e134c15d229-1",
-    "is_dir":false,
-    "last_modified":[2020,3,17,6,21,35,1,77,0],
-    "metadata":{"Content-Type":"application/octet-stream"},
-    "object_name":"ca.crt",
-    "size":2037
-  },
-  "message":"OK"}
+    "code": 200,
+    "msg": "ok",
+    "result": null
+}
 ```
 
 
 
+##### 4. 文件状态
 
-#### 请求参数
+**请求方法：** GET
 
-**路径参数**
+**URL：**`/api/v1/user/<username>/bucket/<bucket_name>/file/<file_name>/status/`
 
-| 参数名称    | 示例 | 备注 |
-| ----------- | ---- | ---- |
-| bucket_name |      |      |
-| file_name   |      |      |
+**参数说明：**
 
-#### 返回数据
+- username
+  - 类型：string
+  - 位置：PATH
+- bucket_name
+  - 类型：string
+  - 位置：PATH
 
-<table>
-  <thead class="ant-table-thead">
-    <tr>
-      <th key=name>名称</th><th key=type>类型</th><th key=required>是否必须</th><th key=default>默认值</th><th key=desc>备注</th><th key=sub>其他信息</th>
-    </tr>
-  </thead><tbody className="ant-table-tbody"><tr key=0-0><td key=0><span style="padding-left: 0px"><span style="color: #8c8a8a"></span> code</span></td><td key=1><span>number</span></td><td key=2>非必须</td><td key=3></td><td key=4><span style="white-space: pre-wrap"></span></td><td key=5></td></tr><tr key=0-1><td key=0><span style="padding-left: 0px"><span style="color: #8c8a8a"></span> data</span></td><td key=1><span>object</span></td><td key=2>非必须</td><td key=3></td><td key=4><span style="white-space: pre-wrap"></span></td><td key=5></td></tr><tr key=0-1-0><td key=0><span style="padding-left: 20px"><span style="color: #8c8a8a">├─</span> bucket_name</span></td><td key=1><span>string</span></td><td key=2>非必须</td><td key=3></td><td key=4><span style="white-space: pre-wrap"></span></td><td key=5></td></tr><tr key=0-1-1><td key=0><span style="padding-left: 20px"><span style="color: #8c8a8a">├─</span> content_type</span></td><td key=1><span>string</span></td><td key=2>非必须</td><td key=3></td><td key=4><span style="white-space: pre-wrap"></span></td><td key=5></td></tr><tr key=0-1-2><td key=0><span style="padding-left: 20px"><span style="color: #8c8a8a">├─</span> etag</span></td><td key=1><span>string</span></td><td key=2>非必须</td><td key=3></td><td key=4><span style="white-space: pre-wrap"></span></td><td key=5></td></tr><tr key=0-1-3><td key=0><span style="padding-left: 20px"><span style="color: #8c8a8a">├─</span> is_dir</span></td><td key=1><span>boolean</span></td><td key=2>非必须</td><td key=3></td><td key=4><span style="white-space: pre-wrap"></span></td><td key=5></td></tr><tr key=0-1-4><td key=0><span style="padding-left: 20px"><span style="color: #8c8a8a">├─</span> last_modified</span></td><td key=1><span>number []</span></td><td key=2>非必须</td><td key=3></td><td key=4><span style="white-space: pre-wrap"></span></td><td key=5><p key=3><span style="font-weight: '700'">item 类型: </span><span>number</span></p></td></tr><tr key=array-1><td key=0><span style="padding-left: 40px"><span style="color: #8c8a8a">├─</span> </span></td><td key=1><span></span></td><td key=2>非必须</td><td key=3></td><td key=4><span style="white-space: pre-wrap"></span></td><td key=5></td></tr><tr key=0-1-5><td key=0><span style="padding-left: 20px"><span style="color: #8c8a8a">├─</span> metadata</span></td><td key=1><span>object</span></td><td key=2>非必须</td><td key=3></td><td key=4><span style="white-space: pre-wrap"></span></td><td key=5></td></tr><tr key=0-1-5-0><td key=0><span style="padding-left: 40px"><span style="color: #8c8a8a">├─</span> Content-Type</span></td><td key=1><span>string</span></td><td key=2>非必须</td><td key=3></td><td key=4><span style="white-space: pre-wrap"></span></td><td key=5></td></tr><tr key=0-1-6><td key=0><span style="padding-left: 20px"><span style="color: #8c8a8a">├─</span> object_name</span></td><td key=1><span>string</span></td><td key=2>非必须</td><td key=3></td><td key=4><span style="white-space: pre-wrap"></span></td><td key=5></td></tr><tr key=0-1-7><td key=0><span style="padding-left: 20px"><span style="color: #8c8a8a">├─</span> size</span></td><td key=1><span>number</span></td><td key=2>非必须</td><td key=3></td><td key=4><span style="white-space: pre-wrap"></span></td><td key=5></td></tr><tr key=0-2><td key=0><span style="padding-left: 0px"><span style="color: #8c8a8a"></span> message</span></td><td key=1><span>string</span></td><td key=2>非必须</td><td key=3></td><td key=4><span style="white-space: pre-wrap"></span></td><td key=5></td></tr>
-               </tbody>
-              </table>
+**返回结果：**
+
+```json
+{
+	"code": 200,
+	"msg": "ok",
+	"result": {
+		"etag": "ef25b5ca592cccf7d39070f3a73bf518-1",
+		"name": "屏幕快照 2020-02-15 下午8.14.04.png",
+		"lastModified": "2020-04-23T06:46:52Z",
+		"size": 108815,
+		"contentType": "application/octet-stream",
+		"expires": "0001-01-01T00:00:00Z",
+		"metadata": {
+			"Content-Type": ["application/octet-stream"]
+		},
+		"userMetadata": {},
+		"userTags": {},
+		"owner": {
+			"name": "",
+			"id": ""
+		},
+		"Grant": null,
+		"storageClass": ""
+	}
+}
+```
+
+##### 5. 文件列表
+
+**请求方法：** GET
+
+**URL：**`/api/v1/user/<username>/bucket/<bucket_name>/file/`
+
+**参数说明：**
+
+- username
+  - 类型：string
+  - 位置：PATH
+- bucket_name
+  - 类型：string
+  - 位置：PATH
+
+**返回结果：**
+
+```json
+{
+    "code": 200,
+    "msg": "ok",
+    "result": [
+        {
+            "name": "Minio分享.pptx",
+            "size": "249527",
+            "lastModified": "2020-04-17T05:49:08Z"
+        },
+        {
+            "name": "屏幕快照 2020-02-15 下午8.14.04.png",
+            "size": "108815",
+            "lastModified": "2020-04-17T06:03:58Z"
+        },
+        {
+            "name": "屏幕快照 2020-04-02 下午6.33.57.png",
+            "size": "218109",
+            "lastModified": "2020-04-17T05:45:44Z"
+        }
+    ]
+}
+```
+
+
+
+##### 6. bucket列表
+
+**请求方法：** GET
+
+**URL：**`/api/v1/user/<username>/bucket/`
+
+**参数说明：**
+
+- username
+  - 类型：string
+  - 位置：PATH
+
+**返回结果：**
+
+```json
+{
+    "code": 200,
+    "msg": "ok",
+    "result": [
+        {
+            "name": "test",
+            "creationDate": "2020-04-17T06:37:44Z"
+        },
+        {
+            "name": "test1",
+            "creationDate": "2020-04-17T05:33:57Z"
+        }
+    ]
+}
+```
+
+##### 7.分享文件
+
+**请求方法：** POST
+
+**URL：** /api/v1/share
+
+**参数说明：**
+
+```json
+{
+	"username":"wangyiyang",
+	"file_name":"屏幕快照 2020-02-15 下午8.14.04.png",
+	"bucket_name":"test",
+	"expiry":3600 //最大7*24*60*60
+}
+```
+
+**返回数据：**
+
+```json
+{
+    "code": 200,
+    "msg": "ok",
+    "result": {
+        "file_path": "/api/v1/share/wangyiyang-test/屏幕快照 2020-02-15 下午8.14.04.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=admin%2F20200424%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200424T075253Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=9db170a475bf25d7c0784f277f4b3f466e08ed852efbde9536d9bdf92e6f747a"
+    }
+}
+```
+
+##### 8. 下载分享文件
+
+**请求方法：** GET
+
+**URL：** <service_ip>:<service_port>/<file_path>
+
+**参数说明：** file_path在 接口7分享文件获得
