@@ -27,7 +27,7 @@ module.exports = {
             {text: 'Home', link: '/'},
             {text: '指南', link: '/guide/'},
         ],
-        displayAllHeaders: 'auto',
+        displayAllHeaders: false,
         sidebarDepth: 1,
         sidebar: [
             ['/guide/', '介绍'],
@@ -62,8 +62,14 @@ module.exports = {
                     '/message_queue/rocketMQ.md',
                 ]
             },
-
-            ['/storage/', '存储'],
+            {
+                title: '存储',
+                collapsable: false,
+                children: [
+                    '/storage/oss_operation',
+                    '/storage/',
+                ]
+            },
             ['/monitor/', '监控'],
             ['/log/', '日志'],
         ]
