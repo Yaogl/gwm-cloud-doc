@@ -94,9 +94,6 @@ Minio使用纠删码erasure code和校验和checksum来保护数据免受硬件�
 
 不允许bucketName有大写字母、下划线、减号，特殊字符 如@#等。，长度为两个字符以上
 
-> 页面待开发，目前使用请联系管理员
-
-
 
 #### API 接口
 
@@ -331,3 +328,11 @@ Minio使用纠删码erasure code和校验和checksum来保护数据免受硬件�
 **URL：** <service_ip>:<service_port>/<file_path>
 
 **参数说明：** file_path在 接口7分享文件获得
+
+##### 9. 永久分享
+
+**请求方法：** GET
+
+**URL：** <service_ip>/api/v1/public/user/<user_name>/bucket/<bucket_name>/file/<file_name>?key=<auth_key>
+
+**参数说明：** auth_key = <user_name>:<password>:<bucket_name>:<file_name>  md5 小写16位 加密
