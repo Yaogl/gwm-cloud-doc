@@ -335,4 +335,4 @@ Minio使用纠删码erasure code和校验和checksum来保护数据免受硬件�
 
 **URL：** <service_ip>/api/v1/public/user/<user_name>/bucket/<bucket_name>/file/<file_name>?key=<auth_key>
 
-**参数说明：** auth_key = <user_name>:<password>:<bucket_name>:<file_name>  md5 小写16位 加密
+**参数说明：** auth_key = `<user_name>:<password>:<bucket_name>:<file_name>`  md5 小写16位 加密
