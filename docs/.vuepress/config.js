@@ -70,6 +70,22 @@ module.exports = {
                     '/storage/',
                 ]
             },
+           {
+                title: 秘钥对',
+                collapsable: false,
+                children: [
+                    '/sshkey/sshkey.md',
+                    '/sshkey/',
+                ]
+            },
+          {
+                title: 容灾组',
+                collapsable: false,
+                children: [
+                    '/servergroup/servergroup.md',
+                    '/servergroup/',
+                ]
+            },
             ['/monitor/', '监控'],
             ['/log/', '日志'],
             ['/user/', "用户管理"],
