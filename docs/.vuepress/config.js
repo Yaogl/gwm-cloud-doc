@@ -71,19 +71,12 @@ module.exports = {
                 ]
             },
            {
-                title: 秘钥对',
+                title: '云主机服务',
                 collapsable: false,
                 children: [
-                    '/sshkey/sshkey.md',
-                    '/sshkey/',
-                ]
-            },
-          {
-                title: 容灾组',
-                collapsable: false,
-                children: [
-                    '/servergroup/servergroup.md',
-                    '/servergroup/',
+                    '/ecs/instance',
+                    '/ecs/sshkey',
+                    '/ecs/servergroup',
                 ]
             },
             ['/monitor/', '监控'],
