@@ -34,3 +34,6 @@ permalink: /ecs/instance.md
 ### 重置系统
 ![](~@vuepress/ecs_reset1.png)
 ![](~@vuepress/ecs_reset2.png)
+
+### 生命周期管理
+![](~@vuepress/ecs_action.png)
