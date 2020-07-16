@@ -1,6 +1,6 @@
 ---
 title: 数据聚合
-permalink: /ecs/streamsets.md
+permalink: /bds/streamsets.md
 ---
 
 ## 数据聚合服务
