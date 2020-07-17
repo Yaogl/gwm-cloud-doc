@@ -1,5 +1,5 @@
 ---
-title: 使用说明
+title: 快照
 permalink: /storage/snapshot
 
 ---
