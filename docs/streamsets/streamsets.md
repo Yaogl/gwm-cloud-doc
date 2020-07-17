@@ -3,7 +3,7 @@ title: 数据聚合
 permalink: /streamsets/streamsets.md
 ---
 
-## 数据聚合服务
+## 数据聚合
 ### 数据聚合列表
 ![](~@vuepress/streamsets-list.png)
 
