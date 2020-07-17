@@ -81,6 +81,21 @@ module.exports = {
                     '/ecs/servergroup',
                 ]
             },
+           {
+                title: '网络服务',
+                collapsable: false,
+                children: [
+                    '/network/vpc',
+                    '/network/seg',
+                ]
+            },
+           {
+                title: '大数据服务',
+                collapsable: false,
+                children: [
+                    '/bigdata/streamsets',
+                ]
+            },
             ['/monitor/', '监控'],
             ['/log/', '日志'],
             ['/user/', "用户管理"],

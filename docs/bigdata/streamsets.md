@@ -1,6 +1,6 @@
 ---
 title: 数据聚合
-permalink: /streamsets/streamsets.md
+permalink: /bigdata/streamsets.md
 ---
 
 ## 数据聚合
