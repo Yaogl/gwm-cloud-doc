@@ -17,10 +17,13 @@ permalink: /storage/volume
   > 云硬盘大小必须在50G-1024G之间
   > 注意：云硬盘的管理只能通过界面操作。
    创建位置中默认选择不设置，只需要填写云硬盘大小
-   ![](~@vuepress/volume_create_01.png)
-   可以选择从快照创建，从快照创建的磁盘能够复制快照的数据内容 
-   ![](~@vuepress/volume_create_02.png)
-   ![](~@vuepress/volume_create_03.png)
+
+  ![](~@vuepress/volume_create_01.png)
+
+  > 可以选择从快照创建，从快照创建的磁盘能够复制快照的数据内容
+
+  ![](~@vuepress/volume_create_02.png)
+  ![](~@vuepress/volume_create_03.png)
 
 
 
@@ -44,7 +47,8 @@ permalink: /storage/volume
  ### 卸载云硬盘  
   > 点击更多操作，点击卸载按钮
   > 云硬盘的卸载有丢失数据的风险，最好在云主机内部进行磁盘的卸载后再进行卸载操作，这样不易引起数据丢失。
-   ![](~@vuepress/volume_attached_01.png)
+
+  ![](~@vuepress/volume_attached_01.png)
 
  ### 云硬盘创建快照
   > 点击更多操作，点击创建快照按钮
@@ -56,4 +60,5 @@ permalink: /storage/volume
  ### 云硬盘回滚
   > 点击更多操作，点击重置按钮
   > 云硬盘可以回滚到某个快照的数据状态，用作误删除数据时数据的恢复。
-   ![](~@vuepress/volume_revert_01.png)
+
+  ![](~@vuepress/volume_revert_01.png)
