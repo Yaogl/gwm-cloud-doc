@@ -67,6 +67,8 @@ module.exports = {
                 collapsable: false,
                 children: [
                     '/storage/oss_operation',
+                    '/storage/volume',
+                    '/storage/snapshot',
                     '/storage/',
                 ]
             },
