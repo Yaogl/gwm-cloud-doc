@@ -6,7 +6,7 @@ permalink: /storage/volume
 
 
 ## 块存储
-
+- 块存储能够提供云主机的云硬盘功能，支持实时的挂载和卸载操作，能够扩容云主机的磁盘空间容量
 
 ### 云硬盘列表
   > 该页面中显示了自己组中所有云硬盘。
@@ -16,8 +16,9 @@ permalink: /storage/volume
 ### 创建云硬盘
   > 云硬盘大小必须在50G-1024G之间
   > 注意：云硬盘的管理只能通过界面操作。
-
+   创建位置中默认选择不设置，只需要填写云硬盘大小
    ![](~@vuepress/volume_create_01.png)
+   可以选择从快照创建，从快照创建的磁盘能够复制快照的数据内容 
    ![](~@vuepress/volume_create_02.png)
    ![](~@vuepress/volume_create_03.png)
 
