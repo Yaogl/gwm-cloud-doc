@@ -16,7 +16,7 @@ permalink: /ecs/instance.md
 
 ![](~@vuepress/ecs_create1.png)
 
-  选择"可用区"，"云提供商"（目前只支持OpenStack）
+  选择"可用区"，"云提供商"（支持OpenStack，VmWare，阿里云）
 	基础配置选择相应的配置，目前只支持通用型，然后选择内存和CPU的数量配置。
 
 ![](~@vuepress/ecs_create2.png)
@@ -27,14 +27,18 @@ permalink: /ecs/instance.md
 
 ![](~@vuepress/ecs_create3.png)
 
-  最后是云主机系统参数的填写，云主机名称，最多20位。可以选择"密码"或"秘钥"，windows云主机只支持密码，linux都支持，秘钥的内容
+  云主机系统参数的填写，云主机名称，最多20位。可以选择"密码"或"秘钥"，windows云主机只支持密码，linux都支持，秘钥的内容
 	详见"云主机服务"--> "密钥对"，密码必须且只能包含数字和大小写字母，长度大于8位，linux用户为root，windows为Administrator。最后选择要创建的云主机数量，点击创建。
 
 ![](~@vuepress/ecs_create4.png)
 
+  最后选择创建云主机是否需要审批，选择关闭，直接创建。需要审批，选择对应的上级审批人，提交创建申请。
+  根据选择的对应区域、可用区、配置和硬盘大小，计算预估费用（阿里云服务器暂不涉及计费）。
+
+![](~@vuepress/ecs_create5.png)
 
 ### 连接桌面
-点击电脑图标，连接云主机桌面
+点击电脑图标，连接云主机桌面（仅支持OpenStack）
 
 ![](~@vuepress/ecs_desktop1.png)
 
@@ -44,9 +48,22 @@ permalink: /ecs/instance.md
 
 
 ### 云主机详情
-点击云主机名称进入云主机详情，详情中也能进行云主机的控制操作，右侧监控和告警功能还在开发中
+点击云主机名称进入云主机详情，详情中也能进行云主机的控制操作
 
 ![](~@vuepress/ecs_detail1.png)
+
+详情右侧显示对应的CPU、内存、磁盘、网络对应的监控信息
+
+![](~@vuepress/ecs_detail3.png)
+
+切换tab选择告警，可以绑定相应的告警策略，发生告警，发送通知
+
+![](~@vuepress/ecs_detail4.png)
+![](~@vuepress/ecs_detail5.png)
+
+已绑定的策略信息及告警历史
+
+![](~@vuepress/ecs_detail6.png)
 
 详情底部有网络和磁盘相关信息。
 

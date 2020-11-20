@@ -96,6 +96,17 @@ module.exports = {
                     '/bigdata/streamsets',
                 ]
             },
+            {
+                 title: '系统管理',
+                 collapsable: false,
+                 children: [
+                   '/system/approval',
+                   '/system/alarm',
+                   '/system/message_group',
+                   '/system/price_model',
+                   '/system/statistics'
+                 ]
+            },
             ['/monitor/', '监控'],
             ['/log/', '日志'],
             ['/user/', "用户管理"],
