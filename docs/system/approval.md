@@ -21,4 +21,4 @@ permalink: /system/approval
 - 切换到审批订单页面，点击查看订单，可以审批或者驳回需要自己审批的订单。
   如果通过，则创建对应的主机或硬盘，驳回，可以我的订单页面重新修改配置，重新发起申请
 
-  ![](~@vuepress/approval_list_03.png)
+  ![](~@vuepress/approval_list_04.png)
