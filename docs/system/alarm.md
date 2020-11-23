@@ -10,6 +10,15 @@ permalink: /system/alarm
 
   ![](~@vuepress/alarm_list.png)
 
+- 修改告警策略。
+
+  ![](~@vuepress/alarm_edit_01.png)
+  ![](~@vuepress/alarm_edit_02.png)
+
+- 删除告警策略。
+
+  ![](~@vuepress/alarm_delete.png)
+
 ### 创建告警策略
   - 可以自己选择配置信息创建告警策略，点击消息组，可以选择需要推送告警消息的成员小组。
 

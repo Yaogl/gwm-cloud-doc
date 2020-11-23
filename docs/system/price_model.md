@@ -14,6 +14,15 @@ permalink: /system/price_model
 
   ![](~@vuepress/price_model_instance_create.png)
 
+
 - 创建云硬盘价格模型。需要保证每种配置均有对应的价格模型。
 
   ![](~@vuepress/price_model_volume_create.png)
+
+- 编辑价格模型。
+
+  ![](~@vuepress/price_model_edit.png)
+
+- 删除价格模型。
+
+  ![](~@vuepress/price_model_delete.png)
